@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "baekjoon-solver"
+version = "0.0.1"
+description = "baekjoon solver 문제 풀이"
+authors = ["Youngkwang Yang <immutable000@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/2ykwang/baekjoon-solver"
+repository = "https://github.com/2ykwang/baekjoon-solver"
+keywords = ["baekjoon", "online judge"]
+classifiers = [
+    "Environment :: Console",
+    "Framework :: Flake8",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+beautifulsoup4 = "4.11.1"
+httpx = "0.23.0"
+colorama = "0.4.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+
+[tool.poetry.scripts]
+solver = 'baekjoon_solver:main'
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
