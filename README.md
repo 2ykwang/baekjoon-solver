@@ -1,16 +1,17 @@
 ## baekjoon-solver
 
+백준 채점 도구
+
 ### Installation
 ```shell
 $ pip install baekjoon_solver
 ```
 
 ### Usage
+
+- `solve <filename> -p <problem_id>`
+
 ```shell
-$ solve <filename> -p <problem_id> # or
-$ solve <filename> # 문제 파일 가장 상단에 주석으로 문제번호 명시 (# <problem _id>)
-
-
 # ex)
 $ solve test.py -p 11403
 
@@ -18,4 +19,29 @@ $ solve test.py -p 11403
 ============================= 통과 0.024250507354736328s =============================
 테스트 케이스 2
 ============================= 통과 0.02342987060546875s =============================
+```
+
+- `solve <filename>`
+
+파일내용 상단에 문제 번호를 명시해야 함
+```
+test1.py
+
+# problem: 1111 or
+# 1111
+```
+
+```shell
+# ex)
+$ solve solve test1.py
+
+테스트 케이스 1
+
+        > 실행 값:
+6
+0
+        > 예상 값:
+3
+0
+============================= 실패 0.015842199325561523s =============================
 ```

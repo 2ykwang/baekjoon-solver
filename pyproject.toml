@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "baekjoon-solver"
-version = "0.0.1"
+version = "0.0.3"
 description = "baekjoon solver 문제 풀이"
 authors = ["Youngkwang Yang <immutable000@gmail.com>"]
 license = "MIT"
@@ -28,10 +28,10 @@ httpx = "0.23.0"
 colorama = "0.4.5"
 
 [tool.poetry.dev-dependencies]
-pytest = "^7.1.2"
+pytest = "7.1.2"
 
 [tool.poetry.scripts]
-solver = 'baekjoon_solver:main'
+solve = 'baekjoon_solver.main:run'
 
 [tool.pytest.ini_options]
 addopts = "-ra -q"

@@ -97,7 +97,7 @@ def _try_parse_problem_id(filename: str) -> Optional[str]:
     return
 
 
-if __name__ == "__main__":
+def run():
     parser = argparse.ArgumentParser()
     parser.add_argument("filename", help="문제 파일 경로")
     parser.add_argument("-p", "--problem", help="문제 번호")
@@ -107,3 +107,7 @@ if __name__ == "__main__":
 
     # sample_data
     execution(args.filename, problem_id)
+
+
+if __name__ == "__main__":
+    run()
