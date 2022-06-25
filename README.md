@@ -45,3 +45,41 @@ $ solve solve test1.py
 0
 ============================= 실패 0.015842199325561523s =============================
 ```
+
+### vscode integration
+
+- Command palette (shift + ctrl + p) 열기
+- Tasks: Configure Task 선택
+- 아래 내용 입력
+
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Solver",
+            "type": "shell",
+            "command": "solve",
+            "args": [
+                "\"${file}\""
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "showReuseMessage": false,
+                "clear": true,
+                "revealProblems": "never"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+```
+
+- shift + ctrl + b 를 눌러 사용
+
+
